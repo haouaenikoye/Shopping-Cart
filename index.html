@@ -71,31 +71,40 @@
               </ul>
             </nav>
           </div>
+      <form class="form-inline my-2 my-lg-0">
+        <!-- Button trigger modal -->
+<button type="button" class="btn btn-danger card-1" data-toggle="modal" data-target="#exampleModal">
+<p><i class="fas fa-shopping-cart"></i> <span id="nombre-achat"></span> Eléments du panier - <span id="total-achat"></span></p>
+</button>
 
-          <div class="col-6 col-xl-2 text-right" data-aos="fade-down">
-            <div class="d-none d-xl-inline-block">
-              <ul class="site-menu js-clone-nav ml-auto list-unstyled d-flex text-right mb-0" data-class="social">
-                <li>
-                  <a href="#" class="pl-0 pr-3 text-black"><span class="icon-facebook"></span></a>
-                </li>
-                <li>
-                  <a href="#" class="pl-3 pr-3 text-black"><span class="icon-twitter"></span></a>
-                </li>
-                <li>
-                  <a href="#" class="pl-3 pr-3 text-black"><span class="icon-instagram"></span></a>
-                </li>
-                <li>
-                  <a href="#" class="pl-3 pr-3 text-black"><span class="icon-youtube-play"></span></a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
-
-          </div>
-
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+  <h5 class="modal-title" id="exampleModalLabel">Panier</h5>
+  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body" id="liste-achat">  
+<!--<div class="container">
+        <div class="row">
+        <div class="col-4"><img src="" alt="" class="img-fluid rounded-circle élémentImg" style="width: 60%;"></div>
+        <div class="col-4"><h4 class="élémentNom"></h4><p class="élémentPrix"></p></div>
+        <div class="col-4"><button class="btn btn-outline-danger boutonRetirer"><i class="fas fa-trash fa-2"></i></button></div>
         </div>
-      </div>
+    </div>-->
+</div>
+<h3 class="text-center">Total: <span id="tatol-achat"></span>Fcfa</h3>
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-secondary text-danger" id="effacer">Tout effacer</button>
+  <button type="button" class="btn btn-outline-success" id ="confirmer">Confirmer</button>
+</div>
+</div>
+</div>
+</div>
+         </form>
       
     </header>
     <form style="z-index: 2" class="search absolute form-group m-0 w-100 " >
@@ -123,14 +132,13 @@
           </div>
         </div>
       </div>  
-<img class="tiny-svg" src="./images/svgs/search.svg">
+<img class="" src="images/acc.jpg">
       <div class="site-blocks-cover" style="background-image: url(images/acceuil.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
 
             <div class="col-md-8" data-aos="fade-up" data-aos-delay="400">
-    
-
+              <h5 class="text-white font-weight-light text-uppercase mt-3 mb-5">Wa Koubeyni</h5>
               <p><a href="#" class="btn btn-black py-3 px-5">Reservez maintenants!</a></p>
             </div>
           </div>
@@ -178,6 +186,7 @@
         </div>
       </div>
     </div>
+    </div>
     <div id="salon" class="wow fadeInUp ">
       <div class="container">
         <h3 class="h1 text-primary my-4">Votre Coin</h3>
@@ -212,10 +221,16 @@
                     </div>
                     <div class="con">
                         <a href="#">
-                            <h5>Tresse</h5> <br> 2 000f le paquet
+                            <h5>Tresse</h5>
                             <img class="tiny-svg" src="images/tresse.jpg">
                         </a>
                     </div>
+                    <div class="shop-item-details">
+                      <p>Prix : <span class="élémentPrix">2.000</span>F</p>
+                   </div>
+                   <div class="col-6">
+                    <button class="btn btn-success card-1 bouton-achat">Ajouter au Panier</button>
+                </div>
                 </div>
             </div>
             <div class="col-md-4  slideInLeft">
@@ -225,9 +240,15 @@
                     </div>
                     <div class="con">
                         <a href="#">
-                            <h5>Tissage</h5> <br> 2 500f le paquet
+                            <h5>Tissage</h5> 
                             <img class="tiny-svg" src="images/tissage.jpg">
-                        </a>
+                            </a>
+                        </div>
+                        <div class="shop-item-details">
+                          <p>Prix : <span class="élémentPrix">2.000</span>F</p>
+                       </div>
+                       <div class="col-6">
+                        <button class="btn btn-success card-1 bouton-achat">Ajouter au Panier</button>
                     </div>
                 </div>
             </div>
@@ -238,10 +259,16 @@
                     </div>
                     <div class="con">
                         <a href="#">
-                            <h5>Coiffure</h5> <br> 1 000f  
+                            <h5>Coiffure</h5> 
                             <img class="tiny-svg" src="images/coif.jpg">
-                        </a>
+                            </a>
                     </div>
+                    <div class="shop-item-details">
+                      <p>Prix : <span class="élémentPrix">1.000</span>F</p>
+                   </div>
+                   <div class="col-6">
+                    <button class="btn btn-success card-1 bouton-achat">Ajouter au Panier</button>
+                </div>
                 </div>
             </div>
             <div class="col-md-4  slideInLeft">
@@ -251,12 +278,17 @@
                     </div>
                     <div class="con">
                         <a href="#">
-                            <h5>Makeup</h5> <br> 5 000f
-                            <h5>Mariée</h5> <br> 15 000f ( déplacement 20 000f)
-
+                            <h5>Makeup</h5> 
+                            <h5>Mariée</h5> 
                             <img class="tiny-svg" src="images/makeup1.jpeg">
-                        </a>
+                             </a>
                     </div>
+                    <div class="shop-item-details">
+                      <p>Prix : <span class="élémentPrix">5.000 /10.000</span>F</p>
+                   </div>
+                   <div class="col-6">
+                    <button class="btn btn-success card-1 bouton-achat">Ajouter au Panier</button>
+                </div>
                 </div>
             </div>
             <div class="col-md-4  slideInLeft">
@@ -266,10 +298,16 @@
                     </div>
                     <div class="con">
                         <a href="#">
-                            <h5>Faux-cils</h5> <br> 2 000f
+                            <h5>Faux-cils</h5>
                             <img class="tiny-svg" src="images/ 1.jpg">
-                        </a>
+                             </a>
                     </div>
+                    <div class="shop-item-details">
+                      <p>Prix : <span class="élémentPrix">2.000</span>F</p>
+                   </div>
+                   <div class="col-6">
+                    <button class="btn btn-success card-1 bouton-achat">Ajouter au Panier</button>
+                </div>
                 </div>
             </div>
             <div class="col-md-4  slideInLeft">
@@ -279,11 +317,17 @@
                   </div>
                   <div class="con">
                       <a href="#">
-                          <h5>Pose-Ongles</h5> <br> 2 000f
+                          <h5>Pose-Ongles</h5> 
                           <img class="tiny-svg" src="images/onglerie.jpg">
                       </a>
                   </div>
+                  <div class="shop-item-details">
+                    <p>Prix : <span class="élémentPrix">4.000</span>F</p>
+                 </div>
+                 <div class="col-6">
+                  <button class="btn btn-success card-1 bouton-achat">Ajouter au Panier</button>
               </div>
+               </div>
           </div>
           <div class="col-md-4  slideInLeft">
             <div class="item animate-box" data-animate-effect="fadeInLeft">
@@ -292,10 +336,16 @@
                 </div>
                 <div class="con">
                     <a href="#">
-                        <h5>Pédicure-Manucure</h5> <br> 4 000f
+                        <h5>Pédicure-Manucure</h5>
                         <img class="tiny-svg" src="images/man.jpg">
-                    </a>
+                        </a>
                 </div>
+                <div class="shop-item-details">
+                  <p>Prix : <span class="élémentPrix">2.000</span>F</p>
+               </div>
+               <div class="col-6">
+                <button class="btn btn-success card-1 bouton-achat">Ajouter au Panier</button>
+            </div>
             </div>
         </div>
         <div class="col-md-4  slideInLeft">
@@ -306,11 +356,16 @@
               <div class="con">
                   <a href="#">
                       <h5>Hénné</h5>
-                       <br> 2 500f ( ensemble 5 000f)
-                      <h5>Mariée</h5> <br> 10 000f
+                      <h5>Mariée</h5>
                       <img class="tiny-svg" src="images/henne1.j.jpg">
-                  </a>
+                     </a>
               </div>
+              <div class="shop-item-details">
+                <p>Prix : <span class="élémentPrix">5.000/10.000</span>F</p>
+             </div>
+             <div class="col-6">
+              <button class="btn btn-success card-1 bouton-achat">Ajouter au Panier</button>
+          </div>
           </div>
       </div>
       <div class="col-md-4  slideInLeft">
@@ -321,10 +376,15 @@
             <div class="con">
                 <a href="#">
                     <h5>Soin de Visage </h5>
-                     <br> 2 000f
                     <img class="tiny-svg" src="images/sourire.png">
-                </a>
+                    </a>
             </div>
+            <div class="shop-item-details">
+              <p>Prix : <span class="élémentPrix">2.500</span>F</p>
+           </div>
+           <div class="col-6">
+            <button class="btn btn-success card-1 bouton-achat">Ajouter au Panier</button>
+        </div>
         </div>
     </div>
     <div class="col-md-4  slideInLeft">
@@ -335,10 +395,16 @@
           <div class="con">
               <a href="#">
                   <h5>Tatouage</h5
-                    <br>  500f
+                    
                   <img class="tiny-svg" src="images/maquillage-1.jpg">
-              </a>
+                  </a>
           </div>
+          <div class="shop-item-details">
+            <p>Prix : <span class="élémentPrix">1.000</span>F</p>
+         </div>
+         <div class="col-6">
+          <button class="btn btn-success card-1 bouton-achat">Ajouter au Panier</button>
+      </div>
       </div>
   </div>
   <div class="col-md-4  slideInLeft">
@@ -349,10 +415,16 @@
         <div class="con">
             <a href="#">
                 <h5>Lavage de Tete</h5>
-                 <br> 500 f
+                
                 <img class="tiny-svg" src="images/lavage-cheveux.jpg">
             </a>
         </div>
+        <div class="shop-item-details">
+          <p>Prix : <span class="élémentPrix">1.000</span>F</p>
+       </div>
+       <div class="col-6">
+        <button class="btn btn-success card-1 bouton-achat">Ajouter au Panier</button>
+    </div>
     </div>
 </div>
             <div class="col-md-4  slideInLeft">
@@ -598,7 +670,43 @@
         </div>
       </div>
     </div>  
-    
+    <section class="container content-section">
+      <form class="form-inline my-2 my-lg-0">
+       
+<button type="button" class="btn btn-success card-1" data-toggle="modal" data-target="#exampleModal">
+<p><i class="fas fa-shopping-cart"></i> <span id="nombre-achat"></span> Le Panier <span id="total-achat"></span>Fcfa</p>
+</button>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+  <h5 class="modal-title" id="exampleModalLabel">Panier</h5>
+  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body" id="liste-achat">  
+<!--<div class="container">
+        <div class="row">
+        <div class="col-4"><img src="" alt="" class="img-fluid rounded-circle élémentImg" style="width: 60%;"></div>
+        <div class="col-4"><h4 class="élémentNom"></h4><p class="élémentPrix"></p></div>
+        <div class="col-4"><button class="btn btn-outline-danger boutonRetirer"><i class="fas fa-trash fa-2"></i></button></div>
+        </div>
+    </div>-->
+</div>
+<h3 class="text-center">Total: <span id="total-achat"></span>F</h3>
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-secondary text-danger" id="effacer">Tout effacer</button>
+  <button type="button" class="btn btn-outline-success" id ="confirmer">Confirmer</button>
+</div>
+</div>
+</div>
+</div>
+         </form>
+  </section>
+
     <footer class="site-footer">
       <div class="container">
         <div class="row">
